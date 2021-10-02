@@ -9,6 +9,7 @@ THIS IS THE SOLUTIONS DOC – SKELETON CODE CAN BE FOUND AT structs_skel.js
 
 // first, print statements (aka the only debugger you will use for literally every language) –>
 console.log('hi js world!') 
+console.log("\n")
 
 
 /* 00 – COMPARATIVE OPERATORS 
@@ -71,6 +72,7 @@ console.log('is x less than 3 or greater than 10?', x<3 || x>10)
 
 // not (!)
 console.log('!(x>3):', !(x>3))
+console.log("\n")
 
 
 
@@ -81,12 +83,19 @@ and the ternary operator!
 
 */
 
+let n = 12
+let m = 36
+
 /* IF SYNTAX
 
 if (condition) {
     run this code
 }
 */
+
+if (n*3 == m) {
+    console.log('n*3 = m')
+}
 
 /* IF ELSE
 
@@ -96,6 +105,12 @@ if (condition) {
     run THIS code
 }
 */
+
+if (n > m) {
+    console.log('n > m')
+} else {
+    console.log('m > n')
+}
 
 /* IF ELSE-IF ELSE
 
@@ -111,6 +126,19 @@ if (condition 1) {
 }
 */
 
+let n1 = 8
+let n2 = 5
+
+if (n1*n2 == 24) {
+    console.log('n1*n2==24')
+} else if (n2 % 2 == 1) {
+    console.log('n1*n2 do not eval to 24 but n2 is odd')
+} else {
+    console.log('n1*n2 do not eval to 24 and n2 is even')
+}
+
+// super critical to remember that once an if statement is executed, we exit out of the struct
+
 /* TERNARY OPERATOR
 
 ty javascript for providing the sickest and smoothest operator OAT (of all time) to execute single statement 
@@ -119,4 +147,24 @@ if-else structs
 condition ? thing-to-do-if-true : thing-to-do-if-false
 
 i'd love to give the js dev who wrote this a CRISP high five bc i use this constantly (and you will too)
+*/
+
+n1 = 12
+n2 = 2
+
+console.log(n1*n2==24 ? 'yes maam' : 'nope')
+console.log("\n")
+
+
+
+/* 02 – FOR LOOPS 
+
+to work w data for visualization, we often need to iterate through our entire dataset and do some action 
+for each element. we do that with for loops!
+
+similar to if-else statements, for loops in javascript use Java syntax, taking 3 main arguments –> 
+
+for (initial state; conditional state; increment expression) {
+    do this 
+}
 */
