@@ -7,11 +7,6 @@ THIS IS THE SOLUTIONS DOC – SKELETON CODE CAN BE FOUND AT structs_skel.js
 */
 
 
-// first, print statements (aka the only debugger you will use for literally every language) –>
-console.log('hi js world!') 
-console.log("\n")
-
-
 /* 00 – COMPARATIVE OPERATORS 
 
 oftentimes while writing javascript for our visualizations, you'll want to compare 2 pieces of data 
@@ -137,7 +132,7 @@ if (n1*n2 == 24) {
     console.log('n1*n2 do not eval to 24 and n2 is even')
 }
 
-// super critical to remember that once an if statement is executed, we exit out of the struct
+// super critical to remember that once an if statement is executed, we exit out of the struct 
 
 /* TERNARY OPERATOR
 
@@ -152,7 +147,7 @@ i'd love to give the js dev who wrote this a CRISP high five bc i use this const
 n1 = 12
 n2 = 2
 
-console.log(n1*n2==24 ? 'yes maam' : 'nope')
+console.log(n1*n2==24 ? 'yes maam' : 'nah')
 console.log("\n")
 
 
@@ -168,3 +163,86 @@ for (initial state; conditional state; increment expression) {
     do this 
 }
 */
+
+// like this
+for (i = 0; i < 5; i++) {
+    console.log('i rn is', i)
+}
+
+// we can use i in for loops to iterature through arrays
+let nums = [4, 5, 103, 584, 2]
+for (i = 0; i < nums.length; i++) {
+    console.log(nums[i]*c)
+}
+// scope!
+
+// and chain objects accessors 
+let grit_drinks = [
+    
+    {   name:'iced dirty chai',
+        milk_type:'almond',
+        size_in_oz: 20,
+        price: 5.75},
+
+    {   name: 'cold brew',
+        milk_type: 'oat',
+        size_in_oz: 12, 
+        price: 4.50}
+]
+
+for (i = 0; i < grit_drinks.length; i++) {
+    console.log('my go-to order is a ' + grit_drinks[i].size_in_oz + ' oz ' + grit_drinks[i].name + ' with ' + 
+    grit_drinks[i].milk_type + ' milk for $' + grit_drinks[i].price)
+}
+
+console.log('\n')
+
+/* 02 – ACTIVITY 
+
+PART A – write a loop that prints out the numbers 0, 2, 4, 6, 8
+*/
+
+// part A work here
+for (i = 0; i < 5; i++) {
+    console.log(i*2)
+}
+
+/* PART B – write a loop that prints out each element in the 'data_arr' array */
+let data_arr = ['mon', 'tue', 'wed', 'thu', 'fri']
+
+// part B work here
+for (i = 0; i < data_arr.length; i++) {
+    console.log(data_arr[i])
+}
+
+/* PART C – write a loop that prints out  "the ROOTS BOWL NAME comes with PROTEIN and costs $PRICE"
+            for each element in 'roots'
+
+    console.log the total cost of all roots bowls (remember what we know about scope!)
+*/
+let roots = [
+    {   name: 'el jefe', 
+        protein: 'chicken',
+        price: 10.50
+    },
+    {
+        name: 'southern',
+        protein: 'bbq tofu', 
+        price: 10.25
+    },
+    {
+        name: 'tamari',
+        protein: 'miso tofu',
+        price: 9.75
+    }
+]
+
+// part C work here
+let sum = 0
+
+for (i = 0; i < roots.length; i++) {
+    console.log('the ' + roots[i].name + ' comes with ' + roots[i].protein + ' and costs $' + roots[i].price)
+    sum += roots[i].price
+}
+
+console.log(sum)

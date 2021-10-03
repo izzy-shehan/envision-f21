@@ -121,6 +121,7 @@ console.log('len of global_arr', global_arr.length)
 
 // accessing specific array indices uses bracket notation (don't forget arrays are 0-indexed)
 console.log('first arr element', global_arr[0])
+console.log('last arr element', global_arr[global_arr.length-1])
 
 // since array elements can be objects, we can access those objects' properties by chaining array indices
 // with object accessors
@@ -140,3 +141,4 @@ let grit_drinks = [
 
 console.log('my go-to order is a ' + grit_drinks[0].size_in_oz + ' oz ' + grit_drinks[0].name + ' with ' + 
 grit_drinks[0].milk_type + ' milk for $' + grit_drinks[0].price)
+
