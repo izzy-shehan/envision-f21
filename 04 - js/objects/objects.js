@@ -19,8 +19,8 @@ syntactically equivalent to a Python dictionary, js objects similarly mirror css
 */
 
 let envision_obj = {
-    pc: "Izzy", 
-    pls: ['Maira', 'Courtney'],
+    pl: "Izzy", 
+    pcs: ['Maira', 'Courtney'],
     num_students: 7, 
     creative_course: true,
     tech_course: true
@@ -38,7 +38,8 @@ let forge_obj = {
         names: ['Carter', 'Christian'], 
         are_4thyears: true
     },
-    street_addy: 'Elliewood'
+    street_addy: 'Elliewood',
+    was_on_fire: true,
 }
 
 console.log(forge_obj)
@@ -61,3 +62,33 @@ create a nested object, either by adding or calling the object you created above
 // create your obj here
 
 // console.log the obj
+
+console.log('\n')
+
+/* 01 – ACCESSING OBJECT PROPERTIES 
+
+*/
+
+// dot notation
+console.log('what street is forge located on?', forge_obj.street_addy)
+
+// bracket notation 
+console.log('what street is forge located on?', forge_obj['street_addy'])
+
+// to access nested properties, you can chain accessors!
+console.log('what are CDs names?', forge_obj.course_directors.names)
+
+// in bracket notation –>
+console.log('pcs for best course?', forge_obj['best_course']['pcs'])
+
+// to return ALL keys and values of an objects –>
+console.log(Object.keys(forge_obj))
+console.log(Object.values(forge_obj))
+console.log(Object.entries(forge_obj))
+
+
+/* 01 – ACTIVITY 1
+
+using the object you created, use accessors to console.log() a coherent sentence describing it! 
+(try to reference some nested properties)
+*/
