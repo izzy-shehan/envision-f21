@@ -2,7 +2,7 @@
 
 hi team – in this file we'll go over key data structures (objects and array) used in d3.js! 
 
-THIS IS THE SOLUTIONS DOC – SKELETON CODE CAN BE FOUND AT structs_skel.js
+THIS IS THE SKELETON CODE – SOLUTIONS DOC CAN BE FOUND AT objects.js
 */
 
 // first, print statements (aka the only debugger you will use for literally every language) –>
@@ -18,11 +18,7 @@ syntactically equivalent to a Python dictionary, js objects similarly mirror css
 */
 
 let envision_obj = {
-    pl: "Izzy", 
-    pcs: ['Maira', 'Courtney'],
-    num_students: 7, 
-    creative_course: true,
-    tech_course: true
+
 }
 
 console.log(envision_obj)
@@ -68,21 +64,21 @@ create a nested object, either by adding or calling the object you created above
 */
 
 // dot notation
-console.log('what street is forge located on?', forge_obj.street_addy)
+console.log('what street is forge located on?', )
 
 // bracket notation 
-console.log('what street is forge located on?', forge_obj['street_addy'])
+console.log('what street is forge located on?', )
 
 // to access nested properties, you can chain accessors!
-console.log('what are CDs names?', forge_obj.course_directors.names)
+console.log('what are CDs names?', )
 
 // in bracket notation –>
-console.log('pcs for best course?', forge_obj['best_course']['pcs'])
+console.log('pcs for best course?', )
 
 // to return ALL keys and values of an objects –>
-console.log(Object.keys(forge_obj))
-console.log(Object.values(forge_obj))
-console.log(Object.entries(forge_obj))
+console.log()
+console.log()
+console.log()
 console.log('\n')
 
 /* 01 – ACTIVITY 1
@@ -117,11 +113,11 @@ let global_arr = [1, 2, 3, 4, 5]
 
 // length is a super valuable property critical for iterating through the array (python = len(arr))
 // in js, we can access that with the .length property!
-console.log('len of global_arr', global_arr.length)
+console.log('len of global_arr', )
 
 // accessing specific array indices uses bracket notation (don't forget arrays are 0-indexed)
-console.log('first arr element', global_arr[0])
-console.log('last arr element', global_arr[global_arr.length-1])
+console.log('first arr element', )
+console.log('last arr element', )
 
 // since array elements can be objects, we can access those objects' properties by chaining array indices
 // with object accessors
@@ -149,25 +145,3 @@ for this exercise –>
     2. using bracket notation and object accessors, print a unique sentence about the second and last elements
        in the array
 */
-
-// grit_drinks[3] 
-let drink_3 = {
-    name: 'iced coffee',
-    milk_type: 'soy',
-    size_in_oz: 16, 
-    price: 3.50
-}
-
-grit_drinks[3] = drink_3
-console.log(grit_drinks)
-
-// grit_drinks.push()
-let drink_4 = {
-    name: 'high five', 
-    milk_type: 'half and half',
-    size_in_oz: 8, 
-    price: 4.25
-}
-
-grit_drinks.push(drink_4)
-console.log(grit_drinks)
