@@ -54,7 +54,6 @@ console.log("2 > 2: ", 2>2)
 console.log("2 >= 2: ", 2>=2)
 console.log("2 <= 2: ", 2<=2)
 console.log("2 < 2: ", 2<2)
-
 // easy money
 
 // to assess multiple conditions, we can use the js equivalent of and, or, and not
@@ -171,6 +170,7 @@ for (i = 0; i < 5; i++) {
 
 // we can use i in for loops to iterature through arrays
 let nums = [4, 5, 103, 584, 2]
+
 for (i = 0; i < nums.length; i++) {
     console.log(nums[i]*c)
 }
