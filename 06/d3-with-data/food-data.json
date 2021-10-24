@@ -1,0 +1,10 @@
+{
+    "foods":[
+        {"foodName":"grapefruit", "foodGroup":"fruit", "foodColor":"pink"},
+        {"foodName":"orange", "foodGroup":"fruit", "foodColor":"orange"},
+        {"foodName":"kale", "foodGroup":"vegetable", "foodColor":"green"},
+        {"foodName":"bread", "foodGroup":"grain", "foodColor":"brown"},
+        {"foodName":"cheese", "foodGroup":"dairy", "foodColor":"yellow"},
+        {"foodName":"oat milk", "foodGroup":"grain", "foodColor":"white"}
+    ]
+}
