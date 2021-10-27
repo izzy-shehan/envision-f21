@@ -5,5 +5,5 @@ let data = [
     {course:'Source Lite', type:'Technical', students:10},
     {course:'Source', type:'Technical', students:10},
     {course:'Node Lite', type:'Technical', students:8},
-    {course:'Convert', type:'Creative', students:4},
+    {course:'Convert', type:'Creative', students:4}
 ]
