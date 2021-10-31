@@ -201,6 +201,7 @@ let transitionDraw = (dataset) => {
                         .attr("x", d=> d.students*30+8)
 }           
 
+// let's attach our new transition function
 og_data.on('click', () => transitionDraw(data))
 second_data.on('click', () => transitionDraw(data2))
 third_data.on('click', () => transitionDraw(data3))
