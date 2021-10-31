@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.course-labels {
+    font-size:16px;
+    fill:white;
+    font-family: 'Inter';
+    font-weight:500;
+}
+
+.course-numbers {
+    color:black;
+    font-size:16px;
+    font-family: 'Inter';
+    font-weight:500;
+    fill:black;
+}
+
+button {
+    margin-right: 20px;
+}
