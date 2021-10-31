@@ -1,0 +1,15 @@
+.bar-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    fill: white;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.small-bar-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    fill: white;
+    font-weight: 700;
+    text-anchor: middle;
+}
