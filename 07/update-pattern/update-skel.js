@@ -7,7 +7,7 @@ this is the SKELETON DOC – SOLUTIONS CODE is located at update.js
 */
 
 // let's revisit lab's exercise! but now, we have 3 different data sources to switch between
-let data = [
+let data1 = [
     {course:'Node', type:'Technical', students:19},
     {course:'Wireframe', type:'Creative', students:15},
     {course:'Vector', type:'Creative', students:15},
@@ -80,12 +80,33 @@ let draw = (dataset) => {
     // we'll do our data-joins inside so we can pass in any data and get an updated graph
 
     // rectangles
-    
+    svg.selectAll('.course-rects')
+        .data(dataset)
+        .join('rect')
+        .attr('x', 0)
+        .attr('y', (d,i) => y_scale*i+y_bump)
+        .attr('height', 40)
+        .attr('width', (d) => d.students*width_scale)
+        .style('fill', (d) => colorIs(d.type))
+        .classed('course-rects', true)
 
     // course labels
-    
+    svg.selectAll('.course-labels')
+        .data(dataset)
+        .join('text')
+        .text((d) => d.course)
+        .attr('x', 3)
+        .attr('y', (d,i) => y_scale*i+text_bump)
+        .classed('course-labels', true)
 
     // course numbers
+    svg.selectAll('.course-numbers')
+        .data(dataset)
+        .join('text')
+        .text((d) => d.students)
+        .attr('x', (d) => d.students*width_scale+8)
+        .attr('y', (d,i) => y_scale*i+text_bump)
+        .classed('course-numbers', true)
     
 }
 
@@ -105,16 +126,25 @@ making this toggleable is super easy! (all we have to do is attach some eventlis
 */
 
 // first, let's create a button div 
-
+let buttonDiv = body.append('div')
 
 // now, let's append 3 buttons to the div
-
+let og_data = buttonDiv.append('button')
+                    .text('first dataset')
+                    .attr('id', 'og-data')
+let second_data = buttonDiv.append('button')
+                    .text('second dataset')
+                    .attr('id', 'second-data')
+let third_data = buttonDiv.append('button')
+                    .text('third dataset')
+                    .attr('id', 'third-data')
 
 // event listener time!
-
-
-
-
+/*
+og_data.on('click', () => draw(data1))
+second_data.on('click', () => draw(data2))
+third_data.on('click', () => draw(data3))
+*/
 // whew love it
 
 /* D3 TRANSITIONS
@@ -143,7 +173,8 @@ let transitionDraw = (dataset) => {
                     .attr('y', (d,i) => i*70+15)
                     .style('fill', (d) => colorIs(d.type))
                     // from current width, take 500ms to transition to data-specified width
-                    
+                    .transition().duration(500)
+                    .attr('width', (d) => d.students*width_scale)
 
     // course labels
     let labels = svg.selectAll('.course-labels')
@@ -153,12 +184,15 @@ let transitionDraw = (dataset) => {
                     .attr('y', (d,i) => i*70+40)
                     .classed('course-labels', true)
                     // before the text change, take opacity to 0 in 250ms
-                    
+                    .transition().duration(250)
+                    .style('opacity', 0)
                     // change the text 'off-camera' 
-                    
+                    .transition().duration(0)
+                    .text((d) => d.course)
                     // transition back (smoothly) to opacity of 1
+                    .transition().duration(250)
+                    .style('opacity', 1)
                     
-
     // course numbers
     let students = svg.selectAll('.course-numbers')
                         .data(dataset)
@@ -167,7 +201,11 @@ let transitionDraw = (dataset) => {
                         .classed('course-numbers', true)
                         .text((d) => d.students)
                         // mimic x change of rectangles
-                        
+                        .transition().duration(500)
+                        .attr('x', (d) => d.students*width_scale+8)         
 }           
 
 // let's attach our new transition function
+og_data.on('click', () => transitionDraw(data1))
+second_data.on('click', () => transitionDraw(data2))
+third_data.on('click', () => transitionDraw(data3))

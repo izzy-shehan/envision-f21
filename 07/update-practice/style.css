@@ -1,0 +1,18 @@
+#button-div {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    width: 600px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.instructor {
+    stroke: lightskyblue;
+    stroke-width: 3px;
+    stroke-opacity: 1;
+}
