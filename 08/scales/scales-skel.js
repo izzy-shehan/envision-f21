@@ -78,7 +78,7 @@ let transitionDraw = (dataset) => {
                 // define the range to map to
                 
     
-    // define a band scale for y
+    // define a band scale for y (https://github.com/d3/d3-scale)
     
                 // define the current data domain
                 // for band scale, array of objects
