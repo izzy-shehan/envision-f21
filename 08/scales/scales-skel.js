@@ -68,7 +68,7 @@ const colorDeterminer = (type) => {
 */
 
 let transitionDraw = (dataset) => {
-    // find max
+    // find max with max(dataset, function)
     
 
     // define a linear x scale
