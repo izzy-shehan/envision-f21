@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.course-labels {
+    font-size:14px;
+    fill:white;
+    font-family:"Arial";
+    font-weight:700;
+}
+
+.course-numbers {
+    font-size: 14px;
+    font-family:"Arial";
+    font-weight:700;
+    fill:white;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#buttonDiv {
+    margin-left: 30px
+}
+
+.title {
+    font-size:14px;
+    fill:black;
+    font-family:"Arial";
+    font-weight:700;  
+}
