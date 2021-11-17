@@ -31,3 +31,19 @@ button {
     font-weight:700;  
     margin-bottom: 0;
 }
+
+.label {
+    font-size: 14px;
+    fill: black;
+    font-family: Arial;
+    font-weight: 500;
+}
+
+.tt-text {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#tooltip {
+    padding: 7px;
+}
